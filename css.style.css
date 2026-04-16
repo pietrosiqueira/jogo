@@ -1,0 +1,123 @@
+html, body {
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	height: 100%;
+}
+
+body {
+	background: #000000;
+	color: white;
+}
+
+input[type="file"] {
+	color: black;
+}
+
+
+.c3-auto-size-checkbox {
+	font-size: 1em;
+	width: 1em;
+	height: 1em;
+	vertical-align: bottom;
+	margin: 0.1em 0.25em;
+}
+
+html, body, canvas {
+	-o-animation-delay: none;
+	animation-delay: none;
+	touch-action: none;
+}
+
+canvas, .c3htmlwrap {
+	position: absolute;
+}
+
+.c3htmlwrap {
+	contain: strict;
+}
+
+.c3overlay {
+	pointer-events: none;
+}
+
+.c3htmlwrap[interactive] > * {
+	pointer-events: auto;
+}
+
+
+html[ioswebview] .c3htmlwrap,
+html[ioswebview] canvas {
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+html[ioswebview] .c3htmlwrap > * {
+	-webkit-user-select: auto;
+	user-select: auto;
+}
+
+#notSupportedWrap {
+	margin: 2em auto 1em auto;
+	width: 75%;
+	max-width: 45em;
+	border: 2px solid #aaa;
+	border-radius: 1em;
+	padding: 2em;
+	background-color: #f0f0f0;
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	color: black;
+}
+
+#notSupportedTitle {
+	font-size: 1.8em;
+}
+
+.notSupportedMessage {
+	font-size: 1.2em;
+}
+
+.notSupportedMessage em {
+	color: #888;
+}
+
+
+.bbCodeH1 {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.bbCodeH2 {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.bbCodeH3 {
+	font-size: 1.25em;
+	font-weight: bold;
+}
+
+.bbCodeH4 {
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+.bbCodeItem::before {
+	content: " • ";
+}
+
+
+.c3-text-icon {
+	height: 1em;
+	width: auto;
+	position: relative;
+}
+
+
+.c3-screen-reader-text {
+	position: absolute;
+	width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+}
