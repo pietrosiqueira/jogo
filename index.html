@@ -17,9 +17,9 @@
     <p>Este jogo contém elementos desafiadores e pode não ser adequado para crianças menores de 12 anos.</p>
     <p>Por favor, confirme sua idade:</p>
     
-    <div class="age-buttons">
-      <button onclick="confirmAge(11)" class="age-btn under12">Tenho menos de 12 anos</button>
-      <button onclick="confirmAge(13)" class="age-btn over12">Tenho 12 anos ou mais</button>
+    <div class="age-input-container">
+      <input type="number" id="age-input" placeholder="Digite sua idade" min="1" max="100" required>
+      <button onclick="confirmAgeFromInput()" class="confirm-btn">Confirmar</button>
     </div>
     
     <p class="age-warning">⚠️ Se você tem menos de 12 anos, o conteúdo será bloqueado por questões de segurança.</p>
@@ -127,6 +127,16 @@
       localStorage.setItem('ageVerified', 'true');
       hideAgeModal();
     }
+  }
+
+  function confirmAgeFromInput() {
+    const ageInput = document.getElementById('age-input');
+    const age = parseInt(ageInput.value);
+    if (isNaN(age) || age < 1 || age > 100) {
+      alert('Por favor, digite uma idade válida entre 1 e 100 anos.');
+      return;
+    }
+    confirmAge(age);
   }
 
   function resetAgeCheck() {

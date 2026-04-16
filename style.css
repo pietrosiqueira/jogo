@@ -431,15 +431,33 @@ html {
   line-height: 1.6;
 }
 
-.age-buttons {
+.age-input-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 15px;
-  justify-content: center;
   margin: 30px 0;
-  flex-wrap: wrap;
 }
 
-.age-btn {
+#age-input {
+  padding: 15px;
+  border: 2px solid var(--accent);
+  background: transparent;
+  color: var(--text);
+  border-radius: 10px;
+  font-size: 1em;
+  text-align: center;
+  width: 200px;
+  transition: all 0.3s ease;
+}
+
+#age-input:focus {
+  outline: none;
+  box-shadow: 0 0 20px rgba(0, 217, 255, 0.5);
+  border-color: var(--accent);
+}
+
+.confirm-btn {
   padding: 15px 25px;
   border: 2px solid var(--accent);
   background: transparent;
@@ -451,23 +469,15 @@ html {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 0.9em;
-  min-width: 200px;
+  min-width: 150px;
 }
 
-.age-btn:hover {
+.confirm-btn:hover {
   background: var(--accent);
   color: var(--card);
   box-shadow: 0 0 30px rgba(0, 217, 255, 0.7);
   transform: translateY(-3px);
 }
-
-.under12 {
-  border-color: #ff4444;
-  color: #ff4444;
-}
-
-.under12:hover {
-  background: #ff4444;
   box-shadow: 0 0 30px rgba(255, 68, 68, 0.7);
 }
 
