@@ -478,13 +478,6 @@ html {
   box-shadow: 0 0 30px rgba(0, 217, 255, 0.7);
   transform: translateY(-3px);
 }
-  box-shadow: 0 0 30px rgba(255, 68, 68, 0.7);
-}
-
-.over12 {
-  border-color: var(--accent);
-  color: var(--accent);
-}
 
 .age-warning {
   font-size: 0.9em;
